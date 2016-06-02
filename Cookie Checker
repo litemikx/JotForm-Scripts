@@ -33,6 +33,8 @@
       function checkCookie() {
           var user = getCookie("username");
           if (user == "visited") {
+          
+             /*Do something here if the user is just returning*/
               alert("Welcome back!");
               
               
