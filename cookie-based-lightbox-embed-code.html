@@ -38,9 +38,11 @@
               alert("Welcome back!");
                 
           } else {
-            /*Place the JotForm Lightbox embed code here*/
+            /*Place the main JotForm Lightbox embed code here, it starts with "var" and ends with "});"*/
             /*If cookie is not yet set meaning visitor is first time to visit, then show this form*/
-                var JFL_61540469272962 = new JotformFeedback({
+            
+            /*Here's my Lightbox embed code as an example*/   
+               var JFL_61540469272962 = new JotformFeedback({
                     formId: '61540469272962',
                     base: 'https://form.jotform.com/',
                     windowTitle: 'Subscription Form - Guide Cookie based Lightbox',
@@ -51,6 +53,7 @@
                     width: 700,
                     openOnLoad: true
                   });
+
 
                 setCookie("username", "visited");
           }
