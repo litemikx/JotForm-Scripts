@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name=viewport content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+<h1>Hello World!</h1>
+
+
+    <script src="https://form.jotform.com/static/feedback2.js?3.3.REV" type="text/javascript">
+    
+    
+
+    function setCookie(cname, cvalue) {
+        document.cookie = cname+"="+cvalue+"; ";
+      }
+
+      function getCookie(cname) {
+          var name = cname + "=";
+          var ca = document.cookie.split(';');
+          for(var i = 0; i < ca.length; i++) {
+              var c = ca[i];
+              while (c.charAt(0) == ' ') {
+                  c = c.substring(1);
+              }
+              if (c.indexOf(name) == 0) {
+                  return c.substring(name.length, c.length);
+              }
+          }
+          return "";
+      }
+
+      function checkCookie() {
+          var user = getCookie("username");
+          if (user == "visited") {
+              alert("Welcome back!");
+              
+              
+          } else {
+
+            /*Place the JotForm Lightbox embed code here*/
+                var JFL_61534912534959 = new JotformFeedback({
+                  formId: '61534912534959',
+                  base: 'https://form.jotform.com/',
+                  windowTitle: 'Clone of Pure Feed Back form',
+                  background: '#FFA500',
+                  fontColor: '#FFFFFF',
+                  type: '1',
+                  height: 500,
+                  width: 700,
+                  openOnLoad: false
+                });
+
+
+                  setCookie("username", "visited");
+          }
+      }
+
+    checkCookie();
+      
+    </script>
+
+      <!-- Edit the anchor link element by adding an id attribute 'lightbox' and setting its display to none -->
+      <a id="lightboxdelay" class="btn lightbox-61534912534959" style="margin-top: 16px;display:none;">
+        Clone of Book me a Free Survey
+      </a>
+
+      <!-- This is the script to make a 10 second delay, you can adjust the seconds here -->
+      <script language="JavaScript">
+          var delayseconds = 10;
+              function pause() {
+              myTimer = setTimeout('whatToDo()', delayseconds * 1000)
+              }
+             function whatToDo() {
+                document.getElementById('lightboxdelay').click();
+              }
+          window.onload = pause;
+      </script>
+
+</body>
+
+</html>
