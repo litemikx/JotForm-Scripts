@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    
+    <script src="https://form.jotform.com/static/feedback2.js?3.3.REV" type="text/javascript">
+
+      // get current width of the window
+
+    var parentWidth = window.innerWidth;
+
+    var parentHeight;
+
+    // check if the window size is less than 499, assuming that it means it is viewed on a mobile device
+
+    if(window.innerWidth <= 499) {
+
+    parentWidth = window.innerWidth * 0.9; // if it's in mobile view assign the current width to this variable
+
+        parentHeight = window.innerHeight * 0.9;
+
+    } else {
+
+    parentWidth =  500; // if it's viewed on a window larger thatn 499px then set the width to 500px
+
+        parentHeight = 500;
+
+    }
+      var JFL_61655103641954 = new JotformFeedback({
+        formId: '61655103641954',
+        base: 'https://form.jotform.com/',
+        windowTitle: 'Clone of McK',
+        background: '#3612de',
+        fontColor: '#FFFFFF',
+        type: '1',
+        height: parentHeight,
+        width: parentWidth,
+        openOnLoad: false
+      });
+    </script>
+      <a class="btn lightbox-61655103641954" style="margin-top: 16px">
+        Clone of McK
+      </a>
+
+
+<style>
+
+#js-form-content {
+  width: 99% !important;
+  height: 99% !important;
+}
+
+
+</style>
+
+</body>
+</html>
