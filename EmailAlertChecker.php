@@ -1,4 +1,9 @@
 <?php
+/* Author: Charmie Q.
+ * Description: Email status checker and notifier when email alert of the submission failed
+ * Date: August 5, 2016
+ * Version: 1.0
+ * /
 
 //Needs JotForm API to be included
 include "jotform-api-php-master/JotForm.php";
@@ -30,7 +35,7 @@ $mail->SMTPSecure = 'tls';                            // Enable TLS encryption, 
 $mail->Port = 587;                                    // TCP port to connect to
 
 $mail->setFrom('test@test.com', 'Mailer');
-$mail->addAddress('recepient@gmail.com', '');     // Add a recipient
+$mail->addAddress('recipient@gmail.com', '');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
