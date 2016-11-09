@@ -75,45 +75,44 @@ foreach($history as $result) {
 
 		if($submissionID == $resultSubmissionID) {
 
+			//Check if the status of the email alert failed, if it does, trigger PHPmail
+			if($result['status'] == "FAILED") {
+
+
+			//Can echo the output of the failed email alert here. Or create a thank you message here OR redirect a user to another link
+			echo "You can write the Thank you message here.<br> So far the email details are for this submission is printed below for troubleshooting purposes:<br><br>";
+			echo 'Form ID: '.$result['formID'].'<br>';
+			echo 'Submission ID: '.$result['submissionID'].'<br>';
+			echo 'Provider: '.$result['provider'].'<br>';	
+			echo 'From: '.$result['from'].'<br>';
+			echo 'To: '.$result['to'].'<br>';
+			echo 'Status: '.$result['status'].'<br><br>';
+
+
+			//Apend the details of the email alert that failed on this submission that will be sent to backup email
+			$mail->Body .= 'Form ID: '.$result['formID'].'<br>'
+						.'Submission ID: '.$result['submissionID'].'<br>'
+						.'Provider: '.$result['provider'].'<br>'
+						.'From: '.$result['from'].'<br>'
+						.'To: '.$result['to']
+						.'<br>'.'Status: '.$result['status'].'<br><br>';
+
 		
-
-		//Can echo the output of the failed email alert here. Or create a thank you message here OR redirect a user to another link
-		echo "You can write the Thank you message here.<br> So far the email details are for this submission is printed below for troubleshooting purposes:<br><br>"
-		echo 'Form ID: '.$result['formID'].'<br>';
-		echo 'Submission ID: '.$result['submissionID'].'<br>';
-		echo 'Provider: '.$result['provider'].'<br>';	
-		echo 'From: '.$result['from'].'<br>';
-		echo 'To: '.$result['to'].'<br>';
-		echo 'Status: '.$result['status'].'<br><br>';
-
-
-		//Apend the details of the email alert that failed on this submission that will be sent to backup email
-		$mail->Body .= 'Form ID: '.$result['formID'].'<br>'
-					.'Submission ID: '.$result['submissionID'].'<br>'
-					.'Provider: '.$result['provider'].'<br>'
-					.'From: '.$result['from'].'<br>'
-					.'To: '.$result['to']
-					.'<br>'.'Status: '.$result['status'].'<br><br>';
-
-		//Check if the status of the email alert failed, if it does, trigger PHPmail
-		if($result['status'] == "FAILED") {
-
-			if(!$mail->send()) {
-			    echo 'Message could not be sent.<br>';
-			    echo 'Mailer Error: ' . $mail->ErrorInfo;
-			} else {
-			    echo '<br>Message has been sent.<br>';
-			}
+				if(!$mail->send()) {
+				    echo 'Message could not be sent.<br>';
+				    echo 'Mailer Error: ' . $mail->ErrorInfo;
+				} else {
+				    echo '<br>Email status checker has been sent.<br>';
+				}
 
 		}
 
 	}
-
-
 	
 }
 
 ?>
 		
 </body>
+
 </html>
