@@ -42,7 +42,7 @@ $mail->SMTPOptions = array(
 );
 
 $mail->setFrom('FROM EMAIL', 'Mailer');
-$mail->addAddress('RECEPIENT', '');     // Add a recipient
+$mail->addAddress('RECIPIENT', '');     // Add a recipient
 //$mail->addAddress('ellen@example.com');               // Name is optional
 //$mail->addReplyTo('info@example.com', 'Information');
 //$mail->addCC('cc@example.com');
