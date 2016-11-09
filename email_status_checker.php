@@ -80,7 +80,7 @@ foreach($history as $result) {
 
 
 			//Can echo the output of the failed email alert here. Or create a thank you message here OR redirect a user to another link
-			echo "You can write the Thank you message here.<br> So far the email details are for this submission is printed below for troubleshooting purposes:<br><br>";
+			echo "You can write the Thank you message here.<br> So far, the details of the failed email for this submission is printed below for troubleshooting purposes:<br><br>";
 			echo 'Form ID: '.$result['formID'].'<br>';
 			echo 'Submission ID: '.$result['submissionID'].'<br>';
 			echo 'Provider: '.$result['provider'].'<br>';	
