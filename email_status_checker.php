@@ -76,7 +76,7 @@ foreach($history as $result) {
 		if($submissionID == $resultSubmissionID) {
 
 			//Check if the status of the email alert failed, if it does, trigger PHPmail
-			if($result['status'] == "FAILED") {
+			if($result['status'] == "FAILED" || $result['status'] == "IN BOUNCE/BLOCK LIST") {
 
 
 			//Can echo the output of the failed email alert here. Or create a thank you message here OR redirect a user to another link
