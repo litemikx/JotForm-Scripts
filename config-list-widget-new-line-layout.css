@@ -68,6 +68,10 @@ td.col9 {
 
 }
 
+/**End of the set of columns moved in the new line**/ 
+
+
+
 /**Total number of columns + 1 would be your remove button**/
 td.col10 {
     display: inline-block;
@@ -95,6 +99,7 @@ th {
 
 }
 
+/**All columns should be listed here**/
 .col1:before, .col2:before, .col3:before, .col4:before, .col5:before, .col5:before, .col6:before, .col7:before, .col8:before, .col9:before {
 
     font-weight: bold;
