@@ -1,0 +1,168 @@
+/** CSS to customize Configurable List widget to move columsn in new line
+* Author: Charmie Q;
+* Date: 8/17/2017;
+**/
+
+.checkbox, .radio {
+
+margin: 3px 0;
+
+min-width: 70px;
+
+}
+
+#list > tbody > tr:nth-child(1) {
+    display: none !important;
+}
+
+tr {
+
+display: block;
+
+max-height: 300px !important;
+padding-top: 5px;
+padding-bottom: 5px;
+
+
+}
+
+
+/**Columns that should be placed on the next line**/
+td.col6 {
+
+    display: inline-block;
+
+    position: relative;
+
+    top: 10px !important;
+
+}
+
+td.col7 {
+
+    display: inline-block;
+
+    position: relative;
+
+    top: 10px !important;
+
+}
+
+td.col8 {
+
+    display: inline-block;
+
+    position: relative;
+
+    top: 10px !important;
+
+}
+
+td.col9 {
+
+    display: inline-block;
+
+    position: relative;
+
+    top: 10px !important;
+
+}
+
+/**Total number of columns + 1 would be your remove button**/
+td.col10 {
+    display: inline-block;
+    width: 100% !important;
+    position: relative;
+    top: 10px !important;
+    padding-top: 10px !important;
+}
+/**Responsible to adjust the add button position**/
+button.add {
+    display: block !important;
+    position: relative !important;
+    top: 10px !important;
+}
+
+/**Add padding or spaces for columns**/
+td {
+    padding-right: 8px !important;
+}
+
+/**Hide the original table headers**/
+th {
+
+    display: none;
+
+}
+
+.col1:before, .col2:before, .col3:before, .col4:before, .col5:before, .col5:before, .col6:before, .col7:before, .col8:before, .col9:before {
+
+    font-weight: bold;
+
+    display: block;
+
+}
+
+/**Re-label the columns here**/
+td.col1:before {
+
+    content:"Check Box";
+
+}
+
+td.col2:before {
+
+    content:"Radio Buttons";
+
+}
+
+td.col3:before {
+
+    content:"Text Area";
+
+}
+
+td.col4:before {
+
+    content:"Text Box";
+
+}
+
+td.col5:before {
+
+    content:"Number";
+
+}
+
+td.col6:before {
+
+    content: "Time";
+
+    display: block;
+
+}
+
+td.col7:before {
+
+    content:"Drop Down";
+
+    display: block;
+
+}
+
+td.col8:before {
+
+    content:"Calendar";
+
+    display: block;
+
+}
+
+td.col9:before {
+
+    content: "Static Text";
+
+    display: block;
+
+}
+
